@@ -1,0 +1,194 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif ;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(135deg,rgb(0, 242, 255),purple);
+}
+nav{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height:100px;
+    background: rgb(162, 162, 162);
+    box-shadow: 0px 0px 5px black,0px 0px 10px black,0px 0px 15px black,0px 0px 20px black;
+    z-index: 100;
+}
+nav .logo{
+    color: white;
+    font-size: 35px;
+    line-height: 100px;
+    display: inline-block;
+    margin: 0vh 7vw;
+    font-weight: bolder;
+    cursor: pointer;
+}
+nav ul{
+    float: right;
+    margin-right:1.7vw;
+}
+nav ul li{
+    display: inline-block;
+    line-height:100px;
+    margin: 0vw 0.7vw;
+}
+nav ul li a{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height:100px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+    
+}
+a:hover{
+    background: none;
+    color: #00579a;
+}
+.container{
+    position:absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+	width: 100%;
+	max-width: 470px;
+	padding: 30px 20px;
+	background: rgba(10, 10, 10, .45);
+	border: 2px solid #3a1b22;
+	border-radius: 16px;
+}
+.container h1{
+	text-align: center;
+	color: #fff;
+	font-size: 2.5rem;
+	font-weight: 600;
+	padding: 0 0 8px 0;
+}
+.container form{
+	padding: 0 50px;
+}
+form .main{
+	position: relative;
+	margin: 30px 0;
+	border-bottom: 2px solid #3a1b22;
+}
+.main input{
+	width: 100%;
+	padding: 0 5px;
+	font-size: 1rem;
+	height: 40px;
+	border: none;
+	outline: none;
+	background: none;
+	color: #e7e6e6;
+}
+.main label{
+	position: absolute;
+	top: 50%;
+	left: 6px;
+	color: #b2405d;
+	transform: translateY(-50%);
+	font-size: 1.1rem;
+	pointer-events: none;
+	transition: all .40s ease;
+}
+.main span::before{
+	position: absolute;
+	content: '';
+	left: 0;
+	top: 35px;
+	width: 100%;
+	height: 2px;
+}
+.main input:focus ~ label,
+.main input:valid ~ label{
+	top: -3px;
+	color: #fff;
+}
+input[type="submit"]{
+	height: 45px;
+	width: 100%;
+	border: none;
+	background: #b2405d;
+	color: #fff;
+	font-size: 1.1rem;
+	border-radius: 16px;
+	cursor: pointer;
+}
+.signup{
+    position: relative;
+	color: #b2405d;
+	font-size: 1.2rem;
+	text-align: center;
+	margin: 30px 0;
+	cursor: pointer;
+}
+.signup a{
+	margin-left: 10px;
+	text-decoration: none;
+    color: white;
+}
+.signup a:hover{
+	text-decoration: underline;
+}
+#pr{
+    display: inline;
+}
+@media(max-width:952px){
+    nav .logo{
+        font-size: 30px;
+        margin: 0px 30px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media(max-width:858px){
+    .checkbtn{
+        display: block;
+        margin-right:2vw;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        background: black;
+        transition: all 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0px ;
+        line-height: 50px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .contain{
+        position: relative;
+        top: 23vh;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 70vh;
+        width:300px;
+        background: white;
+    }
+}

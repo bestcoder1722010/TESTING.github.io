@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/d077dc0def.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="IMAGES/818df10f7a2fa98b1705ae343802cd18.ico">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <h2 class="logo">RECIPE HUB</h2>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">FEEDBACK</a></li>
+            <li><a href="#">CONTACT US</a></li>
+            <li><a href="login.html">SIGN UP</a></li>
+        </ul>
+    </nav>
+<div class="container">
+	<h1 id="heading">SIGN UP</h1>
+	<form method="post">
+		<div class="main">
+			<input type="text" name="" required>
+			<span></span>
+			<label>Username</label>
+		</div>
+
+		<div class="main">
+			<input type="password" name="" required>
+			<span></span>
+			<label>Password</label>
+		</div>
+        <div class="main" id="main1">
+			<input type="password" name="" required>
+			<span></span>
+			<label>Confirm Password</label>
+		</div>
+		<input type="submit" value="Sign Up">
+
+		<div class="signup">
+			<p id="pr">Already a member?</p><a href="#" onclick="login()" id="as">Login here</a>
+		</div>
+	</form>
+</div>
+<script src="login.js"></script>
+</body>
+</html>

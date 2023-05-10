@@ -1,0 +1,184 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif ;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    overflow-x: hidden;
+}
+nav{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height:100px;
+    background: rgb(162, 162, 162);
+    box-shadow: 0px 0px 5px black,0px 0px 10px black,0px 0px 15px black,0px 0px 20px black;
+    z-index: 100;
+}
+nav .logo{
+    color: white;
+    font-size: 35px;
+    line-height: 100px;
+    display: inline-block;
+    margin: 0vh 7vw;
+    font-weight: bolder;
+    cursor: pointer;
+}
+nav ul{
+    float: right;
+    margin-right:1.7vw;
+}
+nav ul li{
+    display: inline-block;
+    line-height:100px;
+    margin: 0vw 0.7vw;
+}
+nav ul li a{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height:100px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+    
+}
+a:hover{
+    background: none;
+    color: #00579a;
+}
+.category{
+    position: relative;
+    top: 16vh;
+    margin:1vh 1.5vw;
+    cursor: pointer;
+}
+.dishes{
+    position: relative;
+    top: 18vh;
+    margin:2vh 1.5vw;
+    cursor: pointer;
+}
+.card-row {
+    position:relative;
+    top: 18vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width:97%;
+  }
+  
+.card {
+    width: calc(33.33% - 20px);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+.card:hover {
+    transform: translateY(-10px);
+  }
+  
+.card img {
+    width: 100%;
+    height:100%;
+    transition: transform 0.3s ease;
+  }
+  
+.card:hover img {
+    transform: scale(1.1);
+  }
+  
+.card-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: bottom 0.3s ease;
+  }
+  
+.card:hover .card-text {
+    bottom: -50px;
+  }
+  
+  
+@media(max-width:952px){
+    nav .logo{
+        font-size: 30px;
+        margin: 0px 30px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .card-row {
+        position:relative;
+        top: 18vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: center;
+        margin: 0 auto;
+        max-width:100%;
+    }
+    .card {
+        width:96%;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        margin-bottom: 30px;
+    }
+      
+}
+@media(max-width:858px){
+    .checkbtn{
+        display: block;
+        margin-right:2vw;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        background: black;
+        transition: all 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0px ;
+        line-height: 50px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .category , .dishes{
+        text-align: center;
+        width: 100%;
+    }
+    
+}
